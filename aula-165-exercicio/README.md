@@ -47,5 +47,36 @@ Este script realiza:
 # ▶️ Como executar
 
 1. Certifique-se de ter Python 3.x instalado.  
-2. Instale o módulo necessário:
+2. Instale o módulo necessário: pip install python-dateutil
+
+3. Execute o arquivo: python aula165.p
+
+# 📌 O que o script exibe
+
+- Todas as **datas de vencimento** (60 meses)  
+- O **número da parcela**  
+- O **valor formatado** no padrão europeu  
+- Um resumo final com:  
+  - Valor total do empréstimo  
+  - Tempo total (anos e meses)  
+  - Valor de cada parcela  
+
+---
+
+# 🎯 Objetivo da aula
+
+Este exercício treina:
+
+- Lógica de datas  
+- Cálculo de parcelas  
+- Uso de bibliotecas externas  
+- Formatação profissional de valores  
+- Construção de loops com condições baseadas em datas  
+
+É um exemplo prático de como Python pode ser usado em sistemas financeiros, relatórios e automações.
+
+---
+
+
+
 
