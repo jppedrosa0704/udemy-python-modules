@@ -1,4 +1,4 @@
-# 📘 Aula 165 — Usando o módulo `calendar` em Python
+# 📘 Aula 166 — Usando o módulo `calendar` em Python
 
 Este diretório contém um exemplo prático de como utilizar o módulo interno `calendar` para trabalhar com calendários, dias da semana e estruturação de meses em Python.
 
