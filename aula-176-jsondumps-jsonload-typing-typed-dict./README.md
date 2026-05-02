@@ -1,29 +1,76 @@
-🎯 O que o teu código faz agora
-Define um TypedDict chamado Movie com todos os campos esperados.
+🧱 Estrutura do código
+1. Importações
+python
+import json
+import os
+from pprint import pprint
+from typing import TypedDict
+json → para converter JSON ↔ Python
 
-Cria uma string JSON com os dados do filme.
+os → usado aqui apenas para limpar o terminal
 
-Converte essa string para um dicionário Python usando json.loads.
+pprint → impressão formatada (não usada no final)
 
-Tipas o resultado como Movie, o que ativa autocomplete no VS Code.
+TypedDict → cria um “modelo” de dicionário tipado
 
-Imprime o dicionário formatado com json.dumps.
+2. Definição do modelo Movie
+python
+class Movie(TypedDict):
+    title : str
+    original_title : str
+    is_movie : bool
+    imdb_rating : float
+    year : int
+    characters : list[str]
+    budget : None | float
+Isto define a estrutura esperada do JSON.
+Serve para:
 
-O resultado final é um JSON bonito, com acentos preservados:
+autocomplete no VS Code
 
-json
-{
-  "title": "O Senhor dos Anéis: A Sociedade do Anel",
-  "original_title": "The Lord of the Rings: The Fellowship of the Ring",
-  "is_movie": true,
-  "imdb_rating": 8.8,
-  "year": 2001,
-  "characters": [
-    "Frodo",
-    "Sam",
-    "Gandalf",
-    "Legolas",
-    "Boromir"
-  ],
-  "budget": null
+evitar erros de chave
+
+documentação clara do formato
+
+3. String JSON
+python
+string_json = '''{
+"title": "O Senhor dos Anéis: A Sociedade do Anel",
+"original_title": "The Lord of the Rings: The Fellowship of the Ring",
+"is_movie": true,
+"imdb_rating": 8.8,
+"year": 2001,
+"characters": ["Frodo", "Sam", "Gandalf", "Legolas", "Boromir"],
+"budget": null
 }
+'''
+É um JSON real, contendo:
+
+strings
+
+booleanos
+
+números
+
+listas
+
+valor null
+
+4. Carregando o JSON
+python
+filme: Movie = json.loads(string_json)
+Aqui:
+
+json.loads converte a string JSON para um dicionário Python
+
+filme: Movie indica ao editor que esse dicionário segue o modelo Movie
+
+5. Imprimindo o JSON formatado
+python
+print(json.dumps(filme, ensure_ascii=False, indent=2))
+ensure_ascii=False mantém acentos
+
+indent=2 deixa o JSON bonito e legível
+
+📌 Resultado final
+O programa imprime o JSON formatado no terminal.
