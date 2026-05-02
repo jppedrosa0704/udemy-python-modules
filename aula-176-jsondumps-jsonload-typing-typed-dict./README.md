@@ -34,7 +34,7 @@ documentação clara do formato
 
 3. String JSON
 python
-string_json = '''{
+sstring_json = '''{
 "title": "O Senhor dos Anéis: A Sociedade do Anel",
 "original_title": "The Lord of the Rings: The Fellowship of the Ring",
 "is_movie": true,
@@ -44,6 +44,7 @@ string_json = '''{
 "budget": null
 }
 '''
+
 É um JSON real, contendo:
 
 strings
